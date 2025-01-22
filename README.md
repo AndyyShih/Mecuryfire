@@ -14,6 +14,3 @@
 
 * DataAccess
 資料庫相關操作、Response Model
-
-## 尚未解決的Bug
-1. 新增使用者的T-SQL是成功的，但紀錄Log的預存程序寫入有問題，還沒改好
