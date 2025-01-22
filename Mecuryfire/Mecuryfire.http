@@ -1,0 +1,6 @@
+@Mecuryfire_HostAddress = http://localhost:5234
+
+GET {{Mecuryfire_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
