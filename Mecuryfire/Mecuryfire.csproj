@@ -18,11 +18,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Controllers\" />
     <Folder Include="DependencyInjectionTool\" />
     <ProjectReference Include="..\BusinessRule\BusinessRule.csproj" />
     <ProjectReference Include="..\Common\Common.csproj" />

@@ -7,6 +7,7 @@ namespace Mecuryfire.DependencyInjectionTool
         public static void AddDIContainer(IServiceCollection services)
         {
             services.AddScoped<IDbConnectionFactory, SqlConnectionFactory>();
+            services.AddScoped<SqlHelper>();
 
             // 掃描 Service 和 Repository 類別
             var servs = typeof(BusinessRule.Services.UserService).Assembly;

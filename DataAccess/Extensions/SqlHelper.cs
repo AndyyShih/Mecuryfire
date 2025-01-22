@@ -49,7 +49,7 @@ namespace DataAccess.Extensions
             parameters.Add("@_InBox_SPNAME", spName);
             parameters.Add("@_InBox_GroupID", groupID);
             parameters.Add("@_InBox_ExProgram", exProgram);
-            parameters.Add("@_InBox_ActionJSON", actionJson);
+            parameters.Add("@_InBox_ActionJSON", actionJson, DbType.String, ParameterDirection.Input, size: 1000);
             parameters.Add("@_OutBox_ReturnValues", dbType: DbType.String, direction: ParameterDirection.Output);
 
             await connection.ExecuteAsync("dbo.usp_AddLog", parameters, commandType: CommandType.StoredProcedure);

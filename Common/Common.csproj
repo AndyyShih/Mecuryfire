@@ -13,4 +13,8 @@
     <PackageReference Include="Microsoft.AspNetCore" Version="2.3.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Enums\" />
+    <Foldrr Include="Extensions\" />
+  </ItemGroup>
 </Project>
