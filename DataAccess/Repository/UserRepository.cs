@@ -63,7 +63,7 @@ namespace DataAccess.Repository
 
             //紀錄動作
             var groupID = Guid.NewGuid();
-            await _sqlHelper.LogActionAsync(1, "usp_AddLog", groupID,"Create",$"{{\"UserID\":\"{newSid}\",\"UserName\":\"{input.CName}\"}}");
+            await _sqlHelper.LogActionAsync(0, "usp_AddLog", groupID,"Create",$"{{\"UserID\":\"{newSid}\",\"UserName\":\"{input.CName}\"}}");
 
             return result;
         }

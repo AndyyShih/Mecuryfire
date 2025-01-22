@@ -46,11 +46,11 @@ namespace DataAccess.Extensions
 
             var parameters = new DynamicParameters();
             parameters.Add("@_InBox_ReadID", readID);
-            parameters.Add("@_InBox_SPNAME", spName);
+            parameters.Add("@_InBox_SPNAME", spName, DbType.String, ParameterDirection.Input, size: 120);// nvarchar(120)
             parameters.Add("@_InBox_GroupID", groupID);
-            parameters.Add("@_InBox_ExProgram", exProgram);
-            parameters.Add("@_InBox_ActionJSON", actionJson, DbType.String, ParameterDirection.Input, size: 1000);
-            parameters.Add("@_OutBox_ReturnValues", dbType: DbType.String, direction: ParameterDirection.Output);
+            parameters.Add("@_InBox_ExProgram", exProgram, DbType.String, ParameterDirection.Input, size: 40); // nvarchar(40)
+            parameters.Add("@_InBox_ActionJSON", actionJson, DbType.String, ParameterDirection.Input, size: -1); // nvarchar(Max)
+            parameters.Add("@_OutBox_ReturnValues", dbType: DbType.String, direction: ParameterDirection.Output, size: -1); // nvarchar(Max)
 
             await connection.ExecuteAsync("dbo.usp_AddLog", parameters, commandType: CommandType.StoredProcedure);
         }
