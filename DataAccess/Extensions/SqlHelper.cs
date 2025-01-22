@@ -1,9 +1,8 @@
 ﻿using Common.Enums;
 using Dapper;
-using DataAccess.Extensions;
 using System.Data;
 
-namespace BusinessRule.Extensions
+namespace DataAccess.Extensions
 {
     public class SqlHelper
     {

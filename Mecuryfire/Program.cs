@@ -1,9 +1,13 @@
+using Mecuryfire.DependencyInjectionTool;
 using Microsoft.OpenApi.Models;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+//引用DI註冊方法
+DependencyInjectionTool.AddDIContainer(builder.Services);
 
 #region Cors Setting
 
