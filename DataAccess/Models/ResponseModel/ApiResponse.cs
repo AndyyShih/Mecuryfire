@@ -1,6 +1,6 @@
 ﻿using Common.Enums;
 
-namespace DataAccess.Repository.ResponseModel
+namespace DataAccess.Models.ResponseModel
 {
     /// <summary>
     /// 無回傳DTO

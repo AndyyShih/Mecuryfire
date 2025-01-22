@@ -1,7 +1,7 @@
 ﻿using Common.Enums;
 using Common.Extensions;
 
-namespace DataAccess.Repository.ResponseModel
+namespace DataAccess.Models.ResponseModel
 {
     public class ApiResponseFactory
     {
